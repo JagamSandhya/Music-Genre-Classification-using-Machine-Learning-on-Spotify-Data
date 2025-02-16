@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music Genre Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Music Features</h2>
+        <form action="/predict" method="POST">
+            <input type="text" name="energy" placeholder="Enter the energy in music" required>
+            <input type="text" name="loudness" placeholder="Enter the loudness in music" required>
+            <input type="text" name="speechiness" placeholder="Enter the speechiness in music" required>
+            <input type="text" name="acousticness" placeholder="Enter the acousticness in music" required>
+            <input type="text" name="instrumentalness" placeholder="Enter the instrumentalness in music" required>
+            <input type="text" name="liveness" placeholder="Enter the liveness in music" required>
+            <input type="text" name="valence" placeholder="Enter the valence in music" required>
+            <input type="text" name="tempo" placeholder="Enter the tempo in music" required>
+            <input type="text" name="duration" placeholder="Enter the duration of music in ms" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
